@@ -1,0 +1,94 @@
+.navbar {
+  background-color: #355675;
+  width: 100%;
+  color: white;
+
+  & .navContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .navLogo {
+    font-size: 30px;
+  }
+
+  & .menuIcon {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  & ul {
+    display: none;
+  }
+
+  & ul li {
+    list-style-type: none;
+  }
+
+  & ul li a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/* desktop menu for linksne */
+@media (min-width: 1000px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar .menuIcon {
+    display: none;
+  }
+
+  .navbar ul li {
+    padding: 20px 15px;
+  }
+
+  .navbar ul li:hover {
+    background-color: #294259;
+  }
+}
+
+/* dedikeret mobil menu */
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 10px 0px;
+  }
+
+  .navbar.active {
+    background-color: #355675;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .navbar.active .navContent {
+    flex-wrap: wrap;
+  }
+
+  .navbar.active ul {
+    padding-top: 20px;
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar.active ul li {
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+
+    transition: background-color 0.3s;
+  }
+
+  .navbar.active ul li:hover {
+    background-color: #294259;
+  }
+}
