@@ -16,9 +16,10 @@ Mangler:
 - Backoffice oversigt.
 - On scroll add box shadow?
 - Skift til deres API! Vigtig!.https://documenter.getpostman.com/view/17346811/2s93RNzFRN#dc4db6ae-0fee-40c2-a1b8-5dd641ed4a9f
-    done.
+    Done.
 - Lav indsend ordre.
-- Lav en slet fra kurv.
+- Lav se ordre generelt.
+- Lav en slet fra kurv. DONE.
 
 - Få navbar til at gå væk på mobil, når du klikker.
 
@@ -28,5 +29,5 @@ Mangler:
 - Kom med flere kommentare til koden.
 - Gør koden pænere generelt.
 - Gør nogle ting til nye komponenter, der ikke er deres egne endnu.
-- Gør desktop versionen af kurven bedre. Done.
-
+- Gør desktop versionen af kurven bedre. DONE.
+- Brug flere css vars.

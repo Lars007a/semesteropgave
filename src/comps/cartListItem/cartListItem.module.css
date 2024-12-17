@@ -28,6 +28,16 @@
   & .desc {
     font-weight: 600;
   }
+
+  & .removeIcon {
+    font-size: 20px;
+    align-self: flex-start;
+    transition: color 0.3s;
+  }
+
+  & .removeIcon:hover {
+    color: red;
+  }
 }
 
 @media (min-width: 1024px) {

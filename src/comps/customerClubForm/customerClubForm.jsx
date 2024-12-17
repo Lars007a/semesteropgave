@@ -32,7 +32,15 @@ export default function customerClubForm() {
   const submitForm = (event) => {
     event.preventDefault();
 
+    console.log(nameVal.length, emailVal.length, whoValue.length);
+
     const sendReq = async () => {
+      if (nameVal.length < 2 || emailVal.length < 2 || whoValue.length < 2) {
+        setMsgBoxMessage("Felterne skal udfyldes med minst 2 tegn...");
+        setShowMsg(true);
+        return;
+      }
+
       try {
         let resp = await fetch("https://legekrogen.webmcdm.dk/subscribe", {
           method: "POST",
@@ -46,29 +54,29 @@ export default function customerClubForm() {
           },
         });
 
-        if (!resp.statusText == "Created") {
+        console.log(resp);
+        let jsonResponse = await resp.json();
+        console.log(jsonResponse);
+
+        if (!jsonResponse.created) {
           throw new Error("Fejl. Bruger ikke lavet. Prøv igen.");
         }
 
         if (!resp.ok) {
           throw new Error("Fejl. Respons ikke ok. Prøv igen.");
         }
+
+        //Ingen problemer.
+        setShowPopup(true);
       } catch (error) {
         console.log(error.message);
-        setMsgBoxMessage("Fejl. Prøv igen senere.");
+        setMsgBoxMessage(error.message);
         setShowMsg(true);
+        return;
       }
     };
 
-    if (nameVal.length < 3 || emailVal.length < 3 || whoValue.length < 3) {
-      setMsgBoxMessage("Felterne skal udfyldes med minst 2 tegn...");
-      setShowMsg(true);
-      return;
-    }
-
     sendReq();
-
-    setShowPopup(true);
   };
 
   return (

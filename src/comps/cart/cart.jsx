@@ -32,6 +32,16 @@ export default function cart() {
   const toggleOpen = () => {
     open ? setOpen(false) : setOpen(true);
   };
+
+  //Funktion for når der bliver klikket på "placere ordre" knappen.
+  const placeOrdre = (event) => {
+    event.preventDefault();
+    console.log("Placeret");
+
+    //Add to db through api.
+    //Skift tekst til "Ordre modtaget!";
+  };
+
   return (
     <>
       <BiCart
@@ -51,7 +61,11 @@ export default function cart() {
                   {filteredArray.map((element, id) => {
                     return <CartListItem obj={element} key={id} />;
                   })}
-                  ;<p className={styles.total}>{countForTotal} kr</p>
+                  ;
+                  <div className={styles.bottomRow}>
+                    <button onClick={placeOrdre}>Læg ordre!</button>
+                    <p className={styles.total}>{countForTotal} kr</p>
+                  </div>
                 </div>
               ) : (
                 <h3 className={styles.noFound}>Ingen produkter fundet...</h3>
