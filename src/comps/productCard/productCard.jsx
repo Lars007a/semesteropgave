@@ -23,7 +23,15 @@ export default function productCard({ obj }) {
 
   return (
     <div className={styles.productCard}>
-      <img src={obj?.image} alt={obj?.description} />
+      <div className={styles.imageContainer}>
+        <img src={obj?.image} alt={obj?.description} />
+        {obj?.discountInPercent > 0 ? (
+          <div className={styles.cornerBox}>{obj?.discountInPercent}%</div>
+        ) : (
+          ""
+        )}
+      </div>
+
       <div className={styles.textContent}>
         <h4>{obj?.title}</h4>
         <p>{obj?.description}</p>

@@ -1,61 +1,87 @@
 .productCard {
-    background-color: #9478A8;
-    border-radius: 25px;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+  background-color: #9478a8;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 
-    & .addBtn {
-        width: 100%;
-        padding: 12px 0px;
-        text-transform: uppercase;
-        text-decoration: none;
-        border:0;
-        outline:none;
+  & .addBtn {
+    width: 100%;
+    padding: 12px 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    outline: none;
 
-        background-color: #6B5778;
-        transition: background-color 0.3s;
-        border-radius: 0px 0px 25px 25px;
+    background-color: #6b5778;
+    transition: background-color 0.3s;
+    border-radius: 0px 0px 25px 25px;
 
-        color: var(--white);
+    color: var(--white);
 
-        font-size: 1.1rem;
-        font-weight: 300;
-    }
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
 
-    & .addBtn:hover {
-        background-color: #533b63;
-    }
-    
-    & img {
-        width: 100%;
-        height: auto;
-        border-radius: 25px 25px 0px 0px;
-    }
+  & .addBtn:hover {
+    background-color: #533b63;
+  }
 
-    & .textContent {
+  & img {
+    display: block;
 
-        padding: 50px 0px 20px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px 25px 0px 0px;
+  }
 
-        justify-content: flex-end;
+  & .imageContainer {
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
 
-        align-items: flex-start;
+    position: relative;
+    display: inline-block;
+  }
 
-    }
+  & .imageContainer .cornerBox {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 50px;
+    height: 50px;
 
-    & .textContent h4 {
-        font-size: 23px;
-        font-weight: 300;
-    }
+    border-radius: 100px;
 
-    & .textContent p {
-        font-size: 18px;
-        font-weight: 500;
-    }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 
-    & .textContent .price {
-        font-size: 23px;
-        font-weight: 400;
-    }
+    background-color: green;
+    color: white;
+
+    display: grid;
+    place-content: center;
+  }
+
+  & .textContent {
+    padding: 50px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+  }
+
+  & .textContent h4 {
+    font-size: 23px;
+    font-weight: 300;
+  }
+
+  & .textContent p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  & .textContent .price {
+    font-size: 23px;
+    font-weight: 400;
+  }
 }
