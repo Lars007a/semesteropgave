@@ -66,10 +66,10 @@ const navbar = () => {
       <div className={`${styles.mobileMenu} ${isOpen ? styles.active : ""}`}>
         <RxCross1
           className={`${styles.closeIconBtn} ${styles.menuIcon}`}
-          size={40}
+          size={50}
           onClick={handleClick}
         />
-        <ul>
+        <ul onClick={handleClick}>
           <li>
             <Link to={"/"}>Forside</Link>
           </li>

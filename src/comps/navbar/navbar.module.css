@@ -2,10 +2,15 @@
   background-color: var(--blueBackground);
   width: 100%;
   color: var(--white);
-/*   position: sticky;
+  /*   position: sticky;
   top: 0;
   left: 0;
   right: 0; */
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 
   & .navContent {
     display: flex;
@@ -18,7 +23,7 @@
     font-size: 30px;
   }
 
-& .logoImg {
+  & .logoImg {
     height: auto;
   }
 
@@ -49,13 +54,13 @@
   }
 
   .mobileMenu {
-    display:none;
+    display: none;
   }
 
   .mobileMenu.active .closeIconBtn {
     float: right;
     padding-top: 20px;
-    padding-right: 20px;
+    padding-right: 30px;
     color: white;
   }
 
@@ -96,7 +101,7 @@
 
 /* desktop menu for linksne */
 @media (min-width: 1024px) {
- .navbar .logoImg {
+  .navbar .logoImg {
     width: 10%;
   }
   .navbar ul {
@@ -131,12 +136,12 @@
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .navbar .logoImg {
     width: 30%;
   }
 }
 
 .navbar.shadow {
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }

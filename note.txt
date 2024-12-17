@@ -10,19 +10,17 @@ For at oprette en bruger, lav en post req til api/register, med username og pass
 Mangler:
 - Fjern pdf fra public folder.
 - discount mærke.
-- Login funktion.
-- Tilføj udtalelse hvis logget ind på forsiden.
+- Login funktion. (Måske ikke)
 - Kun gør backoffice oversigt hvis man er logget ind.
 - Backoffice oversigt.
 - On scroll add box shadow?
 - Skift til deres API! Vigtig!.https://documenter.getpostman.com/view/17346811/2s93RNzFRN#dc4db6ae-0fee-40c2-a1b8-5dd641ed4a9f
     Done.
-- Lav indsend ordre.
+- Lav indsend ordre. Done.
 - Lav se ordre generelt.
 - Lav en slet fra kurv. DONE.
 
 - Få navbar til at gå væk på mobil, når du klikker.
-
 
 - padding i siden af kurven. (Hvad er problemet?)
 - Gør det pænt på desktop med bileder.
