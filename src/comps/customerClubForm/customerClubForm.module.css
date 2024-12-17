@@ -1,58 +1,71 @@
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: 20px;
+  gap: 20px;
 
-    width: 100%;
+  width: 100%;
 
-    & input, & textarea {
-        border-radius:100px;
-        outline:none;
-        border: 0;
-        transition: border 0.2s, background-color 0.3s;
-    }
+  & input,
+  & textarea {
+    border-radius: 100px;
+    outline: none;
+    border: 0;
+    transition: border 0.2s, background-color 0.3s;
+  }
 
-    & input[type="text"], & input[type="email"], & textarea {
-        border: 1px solid #4E6B86; 
-        outline:none;
-        padding: 10px 0px 10px 10px;
-        resize:none;
-        font-style: italic;
-        color: #4E6B86;
-    }
+  & input[type="text"],
+  & input[type="email"],
+  & textarea {
+    border: 1px solid #4e6b86;
+    outline: none;
+    padding: 10px 0px 10px 10px;
+    resize: none;
+    font-style: italic;
+    color: #4e6b86;
+  }
 
-    & textarea {
-        border-radius: 20px;
-        height: 150px;
-    }
+  & textarea {
+    border-radius: 20px;
+    height: 150px;
+  }
 
-    & input[type="text"]:focus, & input[type="email"]:focus, & textarea:focus {
-        border: 1px solid #9478A8;
-    }
+  & input[type="text"]:focus,
+  & input[type="email"]:focus,
+  & textarea:focus {
+    border: 1px solid #9478a8;
+  }
 
-    & input[type="submit"] {
-        background-color: #9478A8;
-        color: var(--white);
-        padding: 15px 0px;
-    }
+  & input[type="submit"] {
+    background-color: #9478a8;
+    color: var(--white);
+    padding: 15px 0px;
+  }
 
-    & input[type="submit"]:hover {
-        background-color: #8253a3;
-    }
-
+  & input[type="submit"]:hover {
+    background-color: #8253a3;
+  }
 }
 
 .formContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
 }
 
-@media(min-width: 1024px) {
-    .form {
-        width: 50%;
-    }
+@media (min-width: 1024px) {
+  .form {
+    width: 50%;
+  }
 }
 
+.msgBox {
+  width: 100%;
+  background-color: red;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  color: white;
+  padding: 20px 0px;
+  text-align: center;
+}

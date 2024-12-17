@@ -3,19 +3,30 @@
 - Kør backoffice med npm run run.
 - Men husk! At .env filen skal have den rigtige mongodb port, tror det er :27017.
 - Kan bruge mongo comppass til bare at forbinde, ved at connecte connecte uden password eller noget til :2707/legekrogen (eller anden port)
-
+- Kør mongodb executable.
 
 For at oprette en bruger, lav en post req til api/register, med username og password i bodyen.
 
 Mangler:
-- Top banner. DONE.
 - Fjern pdf fra public folder.
 - discount mærke.
 - Login funktion.
 - Tilføj udtalelse hvis logget ind på forsiden.
 - Kun gør backoffice oversigt hvis man er logget ind.
 - Backoffice oversigt.
-- Kurv. DONE.
 - On scroll add box shadow?
+- Skift til deres API! Vigtig!.https://documenter.getpostman.com/view/17346811/2s93RNzFRN#dc4db6ae-0fee-40c2-a1b8-5dd641ed4a9f
+    done.
+- Lav indsend ordre.
+- Lav en slet fra kurv.
 
+- Få navbar til at gå væk på mobil, når du klikker.
+
+
+- padding i siden af kurven. (Hvad er problemet?)
+- Gør det pænt på desktop med bileder.
+- Kom med flere kommentare til koden.
+- Gør koden pænere generelt.
+- Gør nogle ting til nye komponenter, der ikke er deres egne endnu.
+- Gør desktop versionen af kurven bedre. Done.
 
