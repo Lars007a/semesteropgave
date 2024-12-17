@@ -1,0 +1,49 @@
+.clubBoxcontent {
+    color: var(--blueBackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+
+    & p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    & h2 {
+        font-size: 50px;
+    }
+
+    & button {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--white);
+        background-color: var(--blueBackground);
+        outline:none;
+        border:0;
+        cursor:pointer;
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 100px;
+        transition: 0.2s background-color;
+    }
+
+    & button:hover {
+        background-color: var(--blueHover);
+    }
+
+    /* til linket! */
+    & a {
+        width: 50%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .clubBoxcontent a {
+        width: 100%;
+    }
+}
+

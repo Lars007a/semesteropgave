@@ -1,7 +1,11 @@
 .navbar {
-  background-color: #355675;
+  background-color: var(--blueBackground);
   width: 100%;
-  color: white;
+  color: var(--white);
+/*   position: sticky;
+  top: 0;
+  left: 0;
+  right: 0; */
 
   & .navContent {
     display: flex;
@@ -12,6 +16,10 @@
 
   & .navLogo {
     font-size: 30px;
+  }
+
+& .logoImg {
+    height: auto;
   }
 
   & .menuIcon {
@@ -29,12 +37,68 @@
 
   & ul li a {
     text-decoration: none;
+    color: var(--white);
+  }
+
+  .iconandlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobileMenu {
+    display:none;
+  }
+
+  .mobileMenu.active .closeIconBtn {
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
     color: white;
+  }
+
+  .mobileMenu.active {
+    background-color: var(--blueBackground);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 80;
+  }
+
+  .mobileMenu.active ul {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileMenu.active ul li {
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+
+    transition: background-color 0.3s;
+  }
+
+  .mobileMenu.active ul li:hover {
+    background-color: var(--blueHover);
   }
 }
 
 /* desktop menu for linksne */
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
+ .navbar .logoImg {
+    width: 10%;
+  }
   .navbar ul {
     display: flex;
     flex-direction: row;
@@ -49,46 +113,30 @@
   }
 
   .navbar ul li:hover {
-    background-color: #294259;
+    background-color: var(--blueHover);
   }
 }
 
 /* dedikeret mobil menu */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .navbar {
     padding: 10px 0px;
   }
-
-  .navbar.active {
-    background-color: #355675;
-    height: 100vh;
-    width: 100vw;
+  .navbar .logoImg {
+    width: 15%;
   }
 
-  .navbar.active .navContent {
-    flex-wrap: wrap;
+  .mobileMenu.active {
+    display: block;
   }
+}
 
-  .navbar.active ul {
-    padding-top: 20px;
-    flex-basis: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media(max-width: 600px) {
+  .navbar .logoImg {
+    width: 30%;
   }
+}
 
-  .navbar.active ul li {
-    width: 100%;
-    padding: 20px;
-
-    text-align: center;
-
-    transition: background-color 0.3s;
-  }
-
-  .navbar.active ul li:hover {
-    background-color: #294259;
-  }
+.navbar.shadow {
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
 }

@@ -1,0 +1,15 @@
+.noFound {
+    margin: 15px 0px;
+    color: var(--backgroundBlue);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.accordionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+}

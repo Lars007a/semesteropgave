@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Square+Peg&display=swap");
+/* basic generel css. */
+:root {
+  --blueBackground: #355675;
+  --blueHover: #294259;
+  --white: white;
+
+  --lightblue: #d7e6ed;
+
+}
 
 * {
   padding: 0;
@@ -11,12 +20,16 @@ html {
   font-weight: 400;
 }
 
+h2 {
+  font-family: "Square Peg", serif;
+  font-weight: 500;
+}
+
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Square Peg", serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 500;
 }

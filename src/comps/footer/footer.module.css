@@ -1,0 +1,28 @@
+.footerContent {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    & h2 {
+        font-size: 40px;
+    }
+
+    & h3 {
+        font-size: 25px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    & .socialIcon {
+        height: 40px;
+        width: auto;
+    }
+
+}

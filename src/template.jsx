@@ -5,6 +5,8 @@ import Faqpage from "./pages/faq/faq.jsx";
 import CustomerClub from "./pages/customerClub/customerClub.jsx";
 import ProductsPage from "./pages/products/products.jsx";
 import Navbar from "./comps/navbar/navbar.jsx";
+import Footer from "./comps/footer/footer.jsx";
+import Topbanner from "./comps/topbanner/topbanner.jsx";
 
 function App() {
   let pagesRoute = useRoutes([
@@ -28,8 +30,10 @@ function App() {
 
   return (
     <>
+    <Topbanner/>
       <Navbar />
       {pagesRoute}
+      <Footer/>
     </>
   );
 }

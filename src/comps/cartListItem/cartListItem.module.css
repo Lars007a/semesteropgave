@@ -1,0 +1,34 @@
+.item {
+    padding: 30px 0px;
+    border-bottom: 1px solid var(--blueBackground);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: var(--blueBackground);
+
+    & img {
+        border: 1px solid var(--blueBackground);
+        border-radius: 10px;
+        height: 100px;
+        width: auto;
+    }
+
+    & .price {
+
+        font-weight: 600;
+        font-size: 1.1rem;
+
+    }
+
+    & .title {
+        font-size: 1.1rem;
+    }
+
+    & .desc {
+        font-weight: 600;
+
+    }
+}

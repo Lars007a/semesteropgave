@@ -1,0 +1,21 @@
+- For at få mongo til at virke, installere community edition.
+- Lav directoriet: users\data\db.
+- Kør backoffice med npm run run.
+- Men husk! At .env filen skal have den rigtige mongodb port, tror det er :27017.
+- Kan bruge mongo comppass til bare at forbinde, ved at connecte connecte uden password eller noget til :2707/legekrogen (eller anden port)
+
+
+For at oprette en bruger, lav en post req til api/register, med username og password i bodyen.
+
+Mangler:
+- Top banner. DONE.
+- Fjern pdf fra public folder.
+- discount mærke.
+- Login funktion.
+- Tilføj udtalelse hvis logget ind på forsiden.
+- Kun gør backoffice oversigt hvis man er logget ind.
+- Backoffice oversigt.
+- Kurv. DONE.
+- On scroll add box shadow?
+
+

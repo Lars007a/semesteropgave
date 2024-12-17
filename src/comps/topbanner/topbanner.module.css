@@ -1,0 +1,31 @@
+.banner {
+    background-color: #D7E6ED;
+
+    width: 100%;
+
+    padding: 10px 0px;
+
+    & .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    & .content .icon {
+        color: #355675;
+        font-size: 1.5rem;
+    }
+
+    & .content p {
+        color: #355675;
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .banner .content p {
+        font-size: 0.8rem;
+    }
+}
