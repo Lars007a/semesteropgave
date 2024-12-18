@@ -1,10 +1,10 @@
 import { RxCross1 } from "react-icons/rx";
 import styles from "./cartListItem.module.css";
-import cart from "../cart/cart";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
+/* En enkelt "item" i kurven. */
 export default function cartListItem({ obj }) {
-  const [cart, setCart] = useLocalStorage("cart", []);
+  const [cart, setCart] = useLocalStorage("cart", []); /* siden produktet kan fjernes fra kurven, henter vi local storage ned. */
 
   const removeItem = (event) => {
     event.preventDefault();

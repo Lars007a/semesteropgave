@@ -2,12 +2,11 @@ import { useState } from "react";
 import styles from "./customerClubForm.module.css";
 import { useRef } from "react";
 import Section from "../section/section.jsx";
-import { Link } from "react-router-dom";
-import Container from "../container/container.jsx";
 import CustomerClubPopup from "../customerClubPopup/customerClubPopup.jsx";
-import customerClubPopup from "../customerClubPopup/customerClubPopup.jsx";
 
+/* Formen til at blive medlem af kundeklubben. */
 export default function customerClubForm() {
+
   //Generelt til formen.
   const [nameVal, setNameVal] = useState("");
   const [emailVal, setEmailVal] = useState("");
@@ -17,30 +16,32 @@ export default function customerClubForm() {
   let whoField = useRef();
 
   //Beskeder for fejl.
-  const [showMsg, setShowMsg] = useState(false);
-  const [msgBoxMessage, setMsgBoxMessage] = useState("");
+  const [showMsg, setShowMsg] = useState(false); //Skal fejl besked vises?
+  const [msgBoxMessage, setMsgBoxMessage] = useState(""); //Hvad skal fejl beskeden være?
 
   //Besked for success.
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); /* Om success popupen skal vises. (Det er et andet komponent.) */
 
+  /* Funktion til at opdater form state vars. */
   const updateForm = () => {
     setEmailVal(emailField.current.value);
     setNameVal(nameField.current.value);
     setWhoVal(whoField.current.value);
   };
 
+  /* Form til submit. */
   const submitForm = (event) => {
-    event.preventDefault();
+    event.preventDefault(); /* Selv definere hvad der skal ske. */
 
-    console.log(nameVal.length, emailVal.length, whoValue.length);
+    /* Tjek om info er puttet ind, hvis ikke, return med fejl besked... */
+    if (nameVal.length < 2 || emailVal.length < 2 || whoValue.length < 2) {
+      setMsgBoxMessage("Felterne skal udfyldes med minst 2 tegn...");
+      setShowMsg(true);
+      return;
+    }
 
+    /* Funktion for at poste dataen. */
     const sendReq = async () => {
-      if (nameVal.length < 2 || emailVal.length < 2 || whoValue.length < 2) {
-        setMsgBoxMessage("Felterne skal udfyldes med minst 2 tegn...");
-        setShowMsg(true);
-        return;
-      }
-
       try {
         let resp = await fetch("https://legekrogen.webmcdm.dk/subscribe", {
           method: "POST",
@@ -58,6 +59,7 @@ export default function customerClubForm() {
         let jsonResponse = await resp.json();
         console.log(jsonResponse);
 
+        /* .created er noget der kommer med, hvis success. */
         if (!jsonResponse.created) {
           throw new Error("Fejl. Bruger ikke lavet. Prøv igen.");
         }
@@ -67,8 +69,9 @@ export default function customerClubForm() {
         }
 
         //Ingen problemer.
-        setShowPopup(true);
+        setShowPopup(true); //Vis success popup.
       } catch (error) {
+        //Hvis fejl, hvis fejl besked med fejlbeskeden vi satte.
         console.log(error.message);
         setMsgBoxMessage(error.message);
         setShowMsg(true);
@@ -76,11 +79,13 @@ export default function customerClubForm() {
       }
     };
 
+    //Kør post funktionen der lige er defineret.
     sendReq();
   };
 
   return (
     <Section backgroundColor={"white"}>
+      {/* Fejl beskeds boks */}
       {showMsg ? (
         <div className={styles.msgBox}>
           <p>{msgBoxMessage}</p>
@@ -115,6 +120,7 @@ export default function customerClubForm() {
           <input type="submit" value="Bliv medlem nu!" />
         </form>
       </div>
+      {/* Popup til at vise, hvis der er success. */}
       {showPopup ? <CustomerClubPopup name={nameVal} /> : ""}
     </Section>
   );

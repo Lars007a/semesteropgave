@@ -2,6 +2,7 @@ import Section from "../section/section.jsx";
 import styles from "./productList.module.css";
 import ProductCard from "../productCard/productCard.jsx";
 
+/* component der bare tager alle cardsne og viser dem ordentligt. */
 export default function productList({ title, productList = [] }) {
   return (
     <>

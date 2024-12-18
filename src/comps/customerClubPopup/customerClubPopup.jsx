@@ -3,7 +3,7 @@ import Container from "../container/container.jsx";
 import {Link} from "react-router-dom";
 import popupImg from "../../assets/heros/medlem.jpg";
 
-
+/* Popup der vises hvis success når bliver medlem af kundeklubben. */
 export default function customerClubPopup({name}) {
     return (<>
      <div className={styles.popup} style= {{backgroundImage: `linear-gradient(rgba(136,112,152, 0.8), rgba(136,112,152, 0.9)), url("${popupImg}")`}}>

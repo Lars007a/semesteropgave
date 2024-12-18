@@ -2,9 +2,8 @@ import Container from "../container/container.jsx";
 import styles from "./topbanner.module.css";
 import { FaTruck } from "react-icons/fa";
 
-
+/* banneret med fri fragt i toppen af siden. */
 export default function topbanner() {
-
 
     return <>
     <div className={styles.banner}>

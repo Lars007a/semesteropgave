@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+/* Hook til at få produkterne fra apien. */
 export function useGetProducts() {
   const [data, setData] = useState([]);
 
@@ -25,6 +26,8 @@ export function useGetProducts() {
 
   return data;
 }
+
+/* Hook til at få citaterne fra kunderne fra apien. */
 
 export function useGetQuotes() {
   const [data, setData] = useState([]);
@@ -51,6 +54,8 @@ export function useGetQuotes() {
   return data;
 }
 
+/* Hook til at få faq spørgsmål fra apien. */
+
 export function useGetFAQS() {
   const [data, setData] = useState([]);
 
@@ -75,3 +80,5 @@ export function useGetFAQS() {
 
   return data;
 }
+
+/* disse funktioner kan måske godt kombineres ind i en funktion? Hvor et argument i hooken bestemmer om får produkter, faq, citater, etc, etc. */

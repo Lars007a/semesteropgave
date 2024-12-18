@@ -1,5 +1,6 @@
 import styles from "./singleQuote.module.css";
 
+/* Et enkelt citat fra kunderne. */
 export default function singleQUote({obj}) {
     return <>
     <div className={styles.box}>

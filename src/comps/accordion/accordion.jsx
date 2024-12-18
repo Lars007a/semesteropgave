@@ -7,7 +7,7 @@ export default function accordion({obj}) {
 
     const [open, setOpen] = useState(false);
 
-
+/* Ændre på om er åben. */
     const change = () => {
         open ? setOpen(false) : setOpen(true);
     }

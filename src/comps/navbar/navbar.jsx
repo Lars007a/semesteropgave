@@ -5,11 +5,12 @@ import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Logo from "../../assets/logo/legekrogen_logo.png";
 import { useState } from "react";
 import Cart from "../cart/cart.jsx";
-import Login from "../login/login.jsx";
+
 
 const navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); /* Om mobilbaren er åben. */
 
+  /* Ændre state vedr mobilbaren åben. */
   const handleClick = () => {
     if (isOpen == true) {
       setIsOpen(false);
@@ -51,18 +52,12 @@ const navbar = () => {
               <li>
                 <Link to={"/club"}>Kundekluben</Link>
               </li>
-
-              <li>
-                <Link to={"/"}>Backoffice</Link>
-              </li>
-              {/*             <li>
-              <Login/>
-            </li> */}
             </ul>
           </div>
         </div>
       </Container>
 
+{/* dedikeret mobilbar. */}
       <div className={`${styles.mobileMenu} ${isOpen ? styles.active : ""}`}>
         <RxCross1
           className={`${styles.closeIconBtn} ${styles.menuIcon}`}
@@ -84,13 +79,6 @@ const navbar = () => {
           <li>
             <Link to={"/club"}>Kundekluben</Link>
           </li>
-
-          <li>
-            <Link to={"/"}>Backoffice</Link>
-          </li>
-          {/*             <li>
-              <Login/>
-            </li> */}
         </ul>
       </div>
     </nav>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function clubbanner() {
 
-
+/* Banneret i bunden hvor man kan blive medlem af kundeklubben. */
     return (
         <>
         <Section backgroundColor={"#d7e6ed"}>

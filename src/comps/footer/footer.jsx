@@ -8,10 +8,10 @@ import { BiSolidPhone } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 
 
-
+/* footeren på alle sider. */
 export default function footer() {
     
-    const {pathname} = useLocation();
+    const {pathname} = useLocation(); /* For at se om vi er på kundeklub siden, og hvis vi er, så viser vi ikke banneret med at tilmelde sig */
 
     let showClubBanner = true;
 
