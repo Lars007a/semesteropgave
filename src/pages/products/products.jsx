@@ -5,7 +5,6 @@ import { useGetProducts } from "../../hooks/getDataHooks.jsx";
 import { useEffect, useState } from "react";
 
 export default function products() {
-
   const [prodsToShow, setProdsToShow] = useState([]);
   const data = useGetProducts();
 
@@ -13,11 +12,15 @@ export default function products() {
     setProdsToShow([...data]);
   }, [data]);
 
-
-  return (<>
-
-    <Header fullCover={false} title={"På udkig efter nyt"} secondText={"LEGETØJ?"} img={headerImg}/>
-    <ProductList title={"Alt vores"} productList={prodsToShow}/>
-  
-  </>);
+  return (
+    <>
+      <Header
+        fullCover={false}
+        title={"På udkig efter nyt"}
+        secondText={"LEGETØJ?"}
+        img={headerImg}
+      />
+      <ProductList title={"Alt vores"} productList={prodsToShow} />
+    </>
+  );
 }
