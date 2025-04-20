@@ -6,7 +6,13 @@
   --white: white;
 
   --lightblue: #d7e6ed;
+}
 
+button,
+svg,
+a,
+li {
+  cursor: pointer;
 }
 
 * {
