@@ -1,4 +1,4 @@
-import "./template.module.css";
+import "./template.css";
 import { useRoutes } from "react-router-dom";
 import Frontpage from "./pages/frontpage/frontpage.jsx";
 import Faqpage from "./pages/faq/faq.jsx";
@@ -32,10 +32,10 @@ function App() {
 
   return (
     <>
-    <Topbanner/>
+      <Topbanner />
       <Navbar />
       {pagesRoute}
-      <Footer/>
+      <Footer />
     </>
   );
 }
